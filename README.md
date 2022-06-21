@@ -1,4 +1,4 @@
-# Dictinonaries
+# Dictionaries
 
 ## Learning Goals
 
