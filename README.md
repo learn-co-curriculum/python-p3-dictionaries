@@ -220,7 +220,15 @@ my_dict = {
 but `dict.items()` is an important tool in writing elegant loops and list
 comprehensions.
 
+There are many more `dict` methods, but these two are the most common that you
+will see in your software career. A full list of `dict` methods can be found in
+the [Python `dict` documentation][dict docs].
+
 ## Resources
 
 - [Python Mapping Types](https://docs.python.org/3/library/stdtypes.html#typesmapping)
-- [Python Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+- [Python Dictionaries][dict docs]
+- [Stack Overflow: Using a dictionary as a switch statement in Python](https://stackoverflow.com/questions/21962763/using-a-dictionary-as-a-switch-statement-in-python)
+- [Python Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary-methods/)
+
+[dict docs]: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
