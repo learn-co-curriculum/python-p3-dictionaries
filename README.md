@@ -11,11 +11,15 @@
 specific order.
 - **Mapping**: a data structure in which data is stored in random order and
 accessed using immutable keys.
+- **Dictionary**: a data type in Python that stores data in key/value pairs.
+The only mapping data structure in Python.
 - **Mutable**: an object that can be changed.
 - **Immutable**: an object that cannot be changed. (_Many immutable objects
 appear mutable because programmers reuse their names for new objects_.)
 - **Arbitrary**: describes data whose value is unimportant to the data type
 or structure in which it is contained.
+- **Exception**: an error in Python that can be handled in such a way that it
+does not interrupt the execution of a program.
 
 ## Introduction
 
