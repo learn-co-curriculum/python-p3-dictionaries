@@ -5,21 +5,29 @@
 - Utilize Python's `dict` data type to accomplish several common programming tasks.
 - Execute and test Python code using the Python shell.
 
+***
+
 ## Key Vocab
 
 - **Sequence**: a data structure in which data is stored and accessed in a
 specific order.
-- **Mapping**: a data structure in which data is stored in random order and
-accessed using immutable keys.
-- **Dictionary**: a data type in Python that stores data in key/value pairs.
-The only mapping data structure in Python.
+- **Index**: the location, represented by an integer, of an element in a
+sequence.
+- **Iterable**: able to be broken down into smaller parts of equal size that
+can be processed in turn. You can loop through any iterable object.
+- **Slice**: a group of neighboring elements in a sequence.
 - **Mutable**: an object that can be changed.
 - **Immutable**: an object that cannot be changed. (_Many immutable objects
 appear mutable because programmers reuse their names for new objects_.)
-- **Arbitrary**: describes data whose value is unimportant to the data type
-or structure in which it is contained.
-- **Exception**: an error in Python that can be handled in such a way that it
-does not interrupt the execution of a program.
+- **List**: a mutable data type in Python that can store many types of data.
+The most common data structure in Python.
+- **Tuple**: an immutable data type in Python that can store many types of
+data.
+- **Range**: a data type in Python that stores integers in a fixed pattern.
+- **String**: an immutable data type in Python that stores unicode characters
+in a fixed pattern. Iterable and indexed, just like other sequences.
+
+***
 
 ## Introduction
 
@@ -51,6 +59,8 @@ have discussed so far are:
 While there are no explicit guidelines on which types of values to use for
 `dict` keys, it is best to use descriptive strings unless the task you are
 trying to accomplish requires you to use another data type.
+
+***
 
 ## When Are Dictionaries Used?
 
@@ -122,6 +132,8 @@ def pour_coffee(size):
 
 > NOTE: If you choose to use dictionary mapping instead of an `if/elif/else`
 > statement, make sure you're using it to write shorter, clearer code.
+
+***
 
 ## Dictionary Methods
 
@@ -227,6 +239,8 @@ comprehensions.
 There are many more `dict` methods, but these two are the most common that you
 will see in your software career. A full list of `dict` methods can be found in
 the [Python `dict` documentation][dict docs].
+
+***
 
 ## Resources
 
