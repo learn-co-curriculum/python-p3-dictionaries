@@ -321,7 +321,7 @@ my_dict = {
 `dict.items()` is an important tool in writing elegant loops and list
 comprehensions.
 
-There are many more `dict` methods, but these two are the most common that you
+There are many more `dict` methods, but these are the most common that you
 will see in your software career. A full list of `dict` methods can be found in
 the [Python `dict` documentation][dict docs].
 
