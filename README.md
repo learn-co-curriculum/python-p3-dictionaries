@@ -223,7 +223,7 @@ print(my_dict)
 # prints { "key_one": "I've changed!", "key_two": "value two", "key_three": "value three"}
 ```
 
-However, Python also offers us a powerful method- the `update` method - that can
+However, Python also offers us a powerful method - the `update` method - that can
 be used to set large amounts of data within an dictionary.
 
 The `update` method can be used to add multiple new key-value pairs at the same
@@ -248,7 +248,7 @@ print(my_dict)
 # prints {'key_one': 'new value one', 'key_two': 'new value two', 'key_three': 'new value three', 'key_four': ' new value four', 'key_five': 'value five'}
 ```
 
-In this example, we passed a dictionary as the argument to update. However, you
+In this example, we passed a dictionary as the argument to `update`. However, you
 can also pass in tuples and arrays as arguments or use assignment operation:
 
 ```py
