@@ -223,12 +223,11 @@ print(my_dict)
 # prints { "key_one": "I've changed!", "key_two": "value two", "key_three": "value three"}
 ```
 
-However, Python also offers us several powerful techniques that can be used to
-set large amounts of data within an dictionary.
+However, Python also offers us a powerful method- the `update` method - that can
+be used to set large amounts of data within an dictionary.
 
-The first is the `update` method. The `update` method can be used to add
-multiple new key-value pairs at the same time, update multiple fields at the
-same time, or do both:
+The `update` method can be used to add multiple new key-value pairs at the same
+time, update multiple fields at the same time, or do both:
 
 ```py
 my_dict = {
