@@ -2,7 +2,8 @@
 
 ## Learning Goals
 
-- Utilize Python's `dict` data type to accomplish several common programming tasks.
+- Utilize Python's `dict` data type to accomplish several common programming
+  tasks.
 - Execute and test Python code using the Python shell.
 
 ***
@@ -13,19 +14,18 @@
 specific order.
 - **Index**: the location, represented by an integer, of an element in a
 sequence.
-- **Iterable**: able to be broken down into smaller parts of equal size that
-can be processed in turn. You can loop through any iterable object.
+- **Iterable**: able to be broken down into smaller parts of equal size that can
+be processed in turn. You can loop through any iterable object.
 - **Slice**: a group of neighboring elements in a sequence.
 - **Mutable**: an object that can be changed.
 - **Immutable**: an object that cannot be changed. (_Many immutable objects
 appear mutable because programmers reuse their names for new objects_.)
-- **List**: a mutable data type in Python that can store many types of data.
-The most common data structure in Python.
-- **Tuple**: an immutable data type in Python that can store many types of
-data.
+- **List**: a mutable data type in Python that can store many types of data. The
+most common data structure in Python.
+- **Tuple**: an immutable data type in Python that can store many types of data.
 - **Range**: a data type in Python that stores integers in a fixed pattern.
-- **String**: an immutable data type in Python that stores unicode characters
-in a fixed pattern. Iterable and indexed, just like other sequences.
+- **String**: an immutable data type in Python that stores unicode characters in
+a fixed pattern. Iterable and indexed, just like other sequences.
 
 ***
 
@@ -64,12 +64,12 @@ trying to accomplish requires you to use another data type.
 
 ## When Are Dictionaries Used?
 
-Dictionaries are best used when there is a fixed name or value that we
-want to associate with a piece of data. An excellent analogy for a Python
-dictionary is...a dictionary!
+Dictionaries are best used when there is a fixed name or value that we want to
+associate with a piece of data. An excellent analogy for a Python dictionary
+is...a dictionary!
 
-We've introduced some new vocabulary in this lesson, so let's organize it into
-a dictionary:
+We've introduced some new vocabulary in this lesson, so let's organize it into a
+dictionary:
 
 ```py
 key_vocab = {
@@ -137,6 +137,8 @@ def pour_coffee(size):
 
 ## Dictionary Methods
 
+### Getting Data
+
 The most important dictionary method is `dict.get()`. Open up the Python shell
 and enter our code from the `pour_coffee()` function above:
 
@@ -149,6 +151,9 @@ def pour_coffee(size):
     }
     return size_to_ounce_map[size]
 ```
+
+In the above example, we're using simple bracket notation - `[]` - to access key
+value pairs within our `size_to_ounce_map`.
 
 Now let's test some different values for size:
 
@@ -164,8 +169,8 @@ pour_coffee("jumbo")
 ```
 
 This error helps us, but it doesn't help our poor coffee machine pour coffee.
-`dict.get()` gives us some tools to avoid `KeyError`s. Let's change our
-`return` statement to use `dict.get()`:
+`dict.get()` gives us some tools to avoid `KeyError`s. Let's change our `return`
+statement to use `dict.get()`:
 
 ```py
 def ...
@@ -188,9 +193,89 @@ pour_coffee("jumbo")
 
 `dict.get()` takes two arguments. The first is required- this is the key that
 you're searching for in your dictionary. The second optional argument is a
-default value for your search (if you don't enter a second argument, Python
-uses `None` as a default value). `dict.get()` is the best way to retrieve
-values from a Python dictionary if you need to avoid `KeyError` exceptions.
+default value for your search (if you don't enter a second argument, Python uses
+`None` as a default value). `dict.get()` is the best way to retrieve values from
+a Python dictionary if you need to avoid `KeyError` exceptions.
+
+### Setting Data
+
+In addition to getting data from a dictionary, we can add new data to a
+dictionary and update existing data within a dictionary.
+
+As with getting data, there are a variety of ways to set data.
+
+The simplest way is to just use bracket notation - `[]` - and the assignment
+operator, much like JavaScript:
+
+```py
+my_dict = {
+    "key_one": "value one",
+    "key_two": "value two",
+}
+
+# update an existing key-value pair:
+my_dict["key_one"] = "I've changed!"
+
+# set a new key-value pair:
+my_dict["key_three"] = "value three"
+
+print(my_dict)
+# prints { "key_one": "I've changed!", "key_two": "value two", "key_three": "value three"}
+```
+
+However, Python also offers us a powerful method - the `update` method - that can
+be used to set large amounts of data within an dictionary.
+
+The `update` method can be used to add multiple new key-value pairs at the same
+time, update multiple fields at the same time, or do both:
+
+```py
+my_dict = {
+    "key_one": "value one",
+    "key_two": "value two",
+}
+
+# update multiple fields:
+my_dict.update({"key_one": "new value one", "key_two": "new value two"})
+
+# add multiple fields:
+my_dict.update({"key_three": "value three", "key_four": "value four"})
+
+# add and update fields simultaneously:
+my_dict.update({"key_three": "new value three", "key_four": " new value four", "key_five": "value five"})
+
+print(my_dict)
+# prints {'key_one': 'new value one', 'key_two': 'new value two', 'key_three': 'new value three', 'key_four': ' new value four', 'key_five': 'value five'}
+```
+
+In this example, we passed a dictionary as the argument to `update`. However, you
+can also pass in tuples and arrays as arguments or use assignment operation:
+
+```py
+my_dict = {
+    "key_one": "value one"
+}
+
+# passing in an array of arrays
+my_dict.update([["key_one", "new value one"], ["key_two", "value two"]])
+
+# passing in an array of tuples
+my_dict.update([("key_two", "new value two"), ("key_three", "value three")])
+
+# passing in a tuple of arrays
+my_dict.update((["key_three", "new value three"], ["key_four", "value four"]))
+
+# passing in a tuple of tuples
+my_dict.update((("key_four", "new value four"), ("key_five", "value five")))
+
+# using assignment operation
+my_dict.update(key_five="new value five", key_six="value six")
+
+print(my_dict)
+# prints {'key_one': 'new value one', 'key_two': 'new value two', 'key_three': 'new value three', 'key_four': 'new value four', 'key_five': 'new value five', 'key_six': 'value six'}
+```
+
+### Iterating Over Dictionaries
 
 The next most commonly used `dict` method is `dict.items()`, which returns an
 object that can be treated as a list of tuples of key/value pairs.
@@ -232,11 +317,11 @@ my_dict = {
 # [1, 2, 3, 4]
 ```
 
-`dict` objects are very useful when accessing one key/value pair at a time,
-but `dict.items()` is an important tool in writing elegant loops and list
+`dict` objects are very useful when accessing one key/value pair at a time, but
+`dict.items()` is an important tool in writing elegant loops and list
 comprehensions.
 
-There are many more `dict` methods, but these two are the most common that you
+There are many more `dict` methods, but these are the most common that you
 will see in your software career. A full list of `dict` methods can be found in
 the [Python `dict` documentation][dict docs].
 
@@ -244,9 +329,12 @@ the [Python `dict` documentation][dict docs].
 
 ## Resources
 
-- [Python Mapping Types](https://docs.python.org/3/library/stdtypes.html#typesmapping)
+- [Python Mapping
+  Types](https://docs.python.org/3/library/stdtypes.html#typesmapping)
 - [Python Dictionaries][dict docs]
-- [Stack Overflow: Using a dictionary as a switch statement in Python](https://stackoverflow.com/questions/21962763/using-a-dictionary-as-a-switch-statement-in-python)
-- [Python Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary-methods/)
+- [Stack Overflow: Using a dictionary as a switch statement in
+  Python](https://stackoverflow.com/questions/21962763/using-a-dictionary-as-a-switch-statement-in-python)
+- [Python Dictionary
+  Methods](https://www.geeksforgeeks.org/python-dictionary-methods/)
 
 [dict docs]: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
