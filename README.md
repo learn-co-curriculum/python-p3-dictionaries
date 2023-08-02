@@ -6,28 +6,28 @@
   tasks.
 - Execute and test Python code using the Python shell.
 
-***
+---
 
 ## Key Vocab
 
 - **Sequence**: a data structure in which data is stored and accessed in a
-specific order.
+  specific order.
 - **Index**: the location, represented by an integer, of an element in a
-sequence.
+  sequence.
 - **Iterable**: able to be broken down into smaller parts of equal size that can
-be processed in turn. You can loop through any iterable object.
+  be processed in turn. You can loop through any iterable object.
 - **Slice**: a group of neighboring elements in a sequence.
 - **Mutable**: an object that can be changed.
 - **Immutable**: an object that cannot be changed. (_Many immutable objects
-appear mutable because programmers reuse their names for new objects_.)
+  appear mutable because programmers reuse their names for new objects_.)
 - **List**: a mutable data type in Python that can store many types of data. The
-most common data structure in Python.
+  most common data structure in Python.
 - **Tuple**: an immutable data type in Python that can store many types of data.
 - **Range**: a data type in Python that stores integers in a fixed pattern.
 - **String**: an immutable data type in Python that stores unicode characters in
-a fixed pattern. Iterable and indexed, just like other sequences.
+  a fixed pattern. Iterable and indexed, just like other sequences.
 
-***
+---
 
 ## Introduction
 
@@ -60,7 +60,7 @@ While there are no explicit guidelines on which types of values to use for
 `dict` keys, it is best to use descriptive strings unless the task you are
 trying to accomplish requires you to use another data type.
 
-***
+---
 
 ## When Are Dictionaries Used?
 
@@ -133,7 +133,7 @@ def pour_coffee(size):
 > NOTE: If you choose to use dictionary mapping instead of an `if/elif/else`
 > statement, make sure you're using it to write shorter, clearer code.
 
-***
+---
 
 ## Dictionary Methods
 
@@ -223,8 +223,8 @@ print(my_dict)
 # prints { "key_one": "I've changed!", "key_two": "value two", "key_three": "value three"}
 ```
 
-However, Python also offers us a powerful method - the `update` method - that can
-be used to set large amounts of data within an dictionary.
+However, Python also offers us a powerful method - the `update` method - that
+can be used to set large amounts of data within an dictionary.
 
 The `update` method can be used to add multiple new key-value pairs at the same
 time, update multiple fields at the same time, or do both:
@@ -242,14 +242,14 @@ my_dict.update({"key_one": "new value one", "key_two": "new value two"})
 my_dict.update({"key_three": "value three", "key_four": "value four"})
 
 # add and update fields simultaneously:
-my_dict.update({"key_three": "new value three", "key_four": " new value four", "key_five": "value five"})
+my_dict.update({"key_three": "new value three", "key_four": "new value four", "key_five": "value five"})
 
 print(my_dict)
-# prints {'key_one': 'new value one', 'key_two': 'new value two', 'key_three': 'new value three', 'key_four': ' new value four', 'key_five': 'value five'}
+# prints {'key_one': 'new value one', 'key_two': 'new value two', 'key_three': 'new value three', 'key_four': 'new value four', 'key_five': 'value five'}
 ```
 
-In this example, we passed a dictionary as the argument to `update`. However, you
-can also pass in tuples and arrays as arguments or use assignment operation:
+In this example, we passed a dictionary as the argument to `update`. However,
+you can also pass in tuples and arrays as arguments or use assignment operation:
 
 ```py
 my_dict = {
@@ -321,20 +321,17 @@ my_dict = {
 `dict.items()` is an important tool in writing elegant loops and list
 comprehensions.
 
-There are many more `dict` methods, but these are the most common that you
-will see in your software career. A full list of `dict` methods can be found in
-the [Python `dict` documentation][dict docs].
+There are many more `dict` methods, but these are the most common that you will
+see in your software career. A full list of `dict` methods can be found in the
+[Python `dict` documentation][dict docs].
 
-***
+---
 
 ## Resources
 
-- [Python Mapping
-  Types](https://docs.python.org/3/library/stdtypes.html#typesmapping)
+- [Python Mapping Types](https://docs.python.org/3/library/stdtypes.html#typesmapping)
 - [Python Dictionaries][dict docs]
-- [Stack Overflow: Using a dictionary as a switch statement in
-  Python](https://stackoverflow.com/questions/21962763/using-a-dictionary-as-a-switch-statement-in-python)
-- [Python Dictionary
-  Methods](https://www.geeksforgeeks.org/python-dictionary-methods/)
+- [Stack Overflow: Using a dictionary as a switch statement in Python](https://stackoverflow.com/questions/21962763/using-a-dictionary-as-a-switch-statement-in-python)
+- [Python Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary-methods/)
 
 [dict docs]: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
